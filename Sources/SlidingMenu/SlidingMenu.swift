@@ -74,15 +74,15 @@ public struct SlidingMenu<Content:View> : View {
                 Spacer()
             }
             .padding()
-            Color.gray.opacity(menuOpen ? 0.7 : 0)
-                .ignoresSafeArea()
-                .onTapGesture {
-                    if menuOpen {
+            if menuOpen {
+                Color.gray.opacity(menuOpen ? 0.7 : 0)
+                    .ignoresSafeArea()
+                    .onTapGesture {
                         withAnimation {
                             menuOpen.toggle()
                         }
                     }
-                }
+            }
             HStack {
                 GeometryReader { geometry in
                     SMDrawer(menuItemData: menuItems, selectedMenuItem: $selectedMenuItem, menuOpen: $menuOpen) {
