@@ -16,7 +16,7 @@ public struct MenuItemData: Equatable {
     public var title: String
     public var view: () -> AnyView
     
-    public init<Content: View>(sfSymbol: String, title: String, @ViewBuilder view: @escaping () -> Content) {
+    public init<Content: View>(sfSymbol: String = "", title: String, @ViewBuilder view: @escaping () -> Content) {
         self.sfSymbol = sfSymbol
         self.title = title
         self.view = { AnyView(view()) }
