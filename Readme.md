@@ -2,7 +2,7 @@
 A Swift framework for iOS projects which creates an easy sliding menu you can drop in your apps
 
 ## Usage
-Add this framework using the SWift Package Manager and `import SlidingMenu`
+Add this framework using the Swift Package Manager and `import SlidingMenu`
 Create an array of MenuItemData, pass the array as a parameter to `SlidingMenu` and provide a view in a trailing enclosure to be used for the menu header
 ```
 let menuItems: [MenuItemData] = [
